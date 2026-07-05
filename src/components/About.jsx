@@ -28,7 +28,7 @@ function About() {
             <div className="about-frame">
               <img
                 src={aboutImg}
-                alt="Preparador Físico Lucas Santos planejando treino"
+                alt="Preparador Físico Lucas Melo planejando treino"
                 loading="lazy"
               />
             </div>
@@ -37,7 +37,7 @@ function About() {
           <div className="about-content">
             <span className="kicker reveal">// Sobre Mim</span>
             <h2 className="section-title reveal">
-              Preparador Físico <span className="accent">Lucas Santos</span>
+              Preparador Físico <span className="accent">Lucas Melo</span>
             </h2>
             <p className="about-text reveal">
               Preparador Físico com atuação direta em treinamento personalizado,

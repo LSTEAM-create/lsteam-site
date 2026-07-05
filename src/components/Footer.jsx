@@ -33,7 +33,7 @@ function Footer() {
             <h4>Redes Sociais</h4>
             <div className="footer-social-icons">
               <a
-                href="https://instagram.com/lg.lucas_santos"
+                href="https://www.instagram.com/ls.lucas.melo"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -57,7 +57,7 @@ function Footer() {
 
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} Lucas Santos — Preparador Físico.
+            © {new Date().getFullYear()} Lucas Melo — Preparador Físico.
             Todos os direitos reservados.
           </p>
         </div>

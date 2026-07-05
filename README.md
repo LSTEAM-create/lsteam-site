@@ -1,6 +1,6 @@
 # LS Team — Forja de Gigantes
 
-Site institucional do preparador físico Lucas Santos, com a mesma identidade
+Site institucional do preparador físico Lucas Melo, com a mesma identidade
 visual Dark Industrial do app de treinos (vercelproject).
 
 ## Comandos
