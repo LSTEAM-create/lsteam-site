@@ -1,5 +1,5 @@
 import { BookOpen, Heart, Activity } from 'lucide-react'
-import aboutImg from '../assets/images/image5.png'
+import aboutImg from '../assets/images/sobre-lucas.png'
 
 const values = [
   {
