@@ -1,43 +1,9 @@
-import { useState } from 'react'
-import { Phone, Mail, ArrowRight, Clock } from 'lucide-react'
+import { Phone, Mail, Clock, Zap } from 'lucide-react'
 import InstagramIcon from './InstagramIcon'
-
-const WHATSAPP = '5522998513777'
-
-const objectives = {
-  hipertrofia: 'Ganhar massa muscular',
-  emagrecimento: 'Emagrecimento',
-  definicao: 'Definição muscular',
-  saude: 'Saúde e bem-estar',
-}
+import WhatsAppIcon from './WhatsAppIcon'
+import { waLink } from '../lib/whatsapp'
 
 function Contact() {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    objective: '',
-    message: '',
-  })
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    const lines = [
-      'Oi! Gostaria de falar sobre acompanhamento.',
-      `Nome: ${form.name}`,
-      `Email: ${form.email}`,
-      `WhatsApp: ${form.phone}`,
-      `Objetivo: ${objectives[form.objective] || form.objective}`,
-      `Mensagem: ${form.message || 'Sem mensagem adicional'}`,
-    ]
-    window.open(
-      `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join('\n'))}`,
-      '_blank',
-    )
-  }
-
-  const set = field => e => setForm({ ...form, [field]: e.target.value })
-
   return (
     <section id="contato" className="section contact">
       <div className="container">
@@ -47,91 +13,41 @@ function Contact() {
             Comece Sua <span className="accent">Transformação</span>
           </h2>
           <p className="section-desc reveal">
-            Pronto para começar? Preencha o formulário ou entre em contato
-            diretamente — treinos baseados em ciência e totalmente
-            individualizados.
+            Sem formulário e sem burocracia: o primeiro passo é uma mensagem.
           </p>
         </div>
 
         <div className="contact-grid">
-          <form className="contact-form reveal" onSubmit={handleSubmit}>
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="name">Nome completo *</label>
-                <input
-                  id="name"
-                  type="text"
-                  required
-                  autoComplete="name"
-                  value={form.name}
-                  onChange={set('name')}
-                  placeholder="Seu nome"
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="phone">WhatsApp *</label>
-                <input
-                  id="phone"
-                  type="tel"
-                  required
-                  autoComplete="tel"
-                  value={form.phone}
-                  onChange={set('phone')}
-                  placeholder="(22) 99999-9999"
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="email">Email *</label>
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  autoComplete="email"
-                  value={form.email}
-                  onChange={set('email')}
-                  placeholder="seu@email.com"
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="objective">Objetivo principal *</label>
-                <select
-                  id="objective"
-                  required
-                  value={form.objective}
-                  onChange={set('objective')}
-                >
-                  <option value="">Selecione seu objetivo</option>
-                  {Object.entries(objectives).map(([key, label]) => (
-                    <option key={key} value={key}>
-                      {label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Mensagem</label>
-              <textarea
-                id="message"
-                rows={4}
-                value={form.message}
-                onChange={set('message')}
-                placeholder="Conte um pouco sobre você e suas expectativas... (opcional)"
-              />
-            </div>
-            <button type="submit" className="btn btn-primary btn-lg btn-full">
-              Enviar via WhatsApp
-              <ArrowRight size={20} />
-            </button>
-          </form>
+          <div className="contact-cta reveal">
+            <span className="contact-cta-badge">
+              <Zap size={14} />
+              Vagas limitadas por mês
+            </span>
+            <h3>Fale direto comigo no WhatsApp</h3>
+            <p>
+              Me conta seu objetivo e eu te explico como funciona a
+              consultoria, os valores e as condições — sem compromisso.
+            </p>
+            <a
+              href={waLink('Oi! Quero começar minha transformação. Pode me explicar como funciona a consultoria?')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary btn-lg btn-full contact-cta-btn"
+            >
+              <WhatsAppIcon size={22} />
+              Chamar no WhatsApp
+            </a>
+            <p className="contact-cta-note">
+              Para manter o acompanhamento próximo e individualizado, atendo um
+              número limitado de alunos por mês. Garanta a sua vaga.
+            </p>
+          </div>
 
           <aside className="contact-info reveal">
-            <h3>Informações de Contato</h3>
+            <h3>Outros Canais</h3>
             <div className="contact-items">
               <a
-                href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Oi! Gostaria de falar sobre acompanhamento.')}`}
+                href={waLink()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-item"

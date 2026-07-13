@@ -1,4 +1,5 @@
 import { Dumbbell, Utensils, ClipboardList, Check, ArrowRight } from 'lucide-react'
+import { waLink } from '../lib/whatsapp'
 
 const services = [
   {
@@ -56,13 +57,30 @@ function Services() {
                   </li>
                 ))}
               </ul>
-              <a href="#contato" className="service-link">
-                Saiba Mais
-                <ArrowRight size={16} />
+              <a
+                href={waLink(`Oi! Tenho interesse no plano "${s.title}". Pode me passar mais detalhes?`)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`btn btn-full service-cta ${s.featured ? 'btn-primary' : 'btn-ghost'}`}
+              >
+                Quero Esse Plano
+                <ArrowRight size={18} />
               </a>
             </div>
           ))}
         </div>
+
+        <p className="services-note reveal">
+          Os valores variam conforme o plano — me chame no{' '}
+          <a
+            href={waLink('Oi! Gostaria de saber os valores e condições dos planos.')}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>{' '}
+          e receba todas as condições sem compromisso.
+        </p>
       </div>
     </section>
   )

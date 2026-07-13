@@ -1,5 +1,6 @@
 import { ArrowRight, ChevronDown } from 'lucide-react'
 import emblem from '../assets/images/favicon.png'
+import heroPhoto from '../assets/images/sobre-lucas.png'
 
 const stats = [
   { value: '3 anos', label: 'de experiência' },
@@ -37,8 +38,21 @@ function Hero() {
             </a>
           </div>
         </div>
-        <div className="hero-emblem reveal" aria-hidden="true">
-          <img src={emblem} alt="" loading="eager" />
+        <div className="hero-photo reveal">
+          <div className="hero-photo-frame">
+            <img
+              src={heroPhoto}
+              alt="Preparador Físico Lucas Melo treinando"
+              loading="eager"
+            />
+          </div>
+          <div className="hero-photo-badge">
+            <img src={emblem} alt="" />
+            <span>
+              <strong>Lucas Melo</strong>
+              Preparador Físico
+            </span>
+          </div>
         </div>
       </div>
 

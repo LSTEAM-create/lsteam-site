@@ -4,8 +4,10 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Methodology from './components/Methodology'
 import Services from './components/Services'
+import HowItWorks from './components/HowItWorks'
 import Transformations from './components/Transformations'
 import Testimonials from './components/Testimonials'
+import Faq from './components/Faq'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import WhatsAppFloat from './components/WhatsAppFloat'
@@ -43,7 +45,9 @@ function App() {
         <About />
         <Methodology />
         <Services />
+        <HowItWorks />
         <Testimonials />
+        <Faq />
         <Contact />
       </main>
       <Footer />

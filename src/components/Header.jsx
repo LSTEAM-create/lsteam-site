@@ -71,7 +71,8 @@ function Header() {
         </nav>
 
         <a href="#contato" className="btn btn-primary btn-sm header-cta">
-          Começar Agora
+          <span className="header-cta-full">Começar Agora</span>
+          <span className="header-cta-short">Começar</span>
         </a>
 
         <button

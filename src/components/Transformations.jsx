@@ -1,4 +1,5 @@
-import { Check } from 'lucide-react'
+import { Check, ArrowRight } from 'lucide-react'
+import { waLink } from '../lib/whatsapp'
 import kauaImg from '../assets/images/image1.png'
 import luisaImg from '../assets/images/image3.png'
 import lucasImg from '../assets/images/lucas-before-after.png'
@@ -113,6 +114,19 @@ function Transformations() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="transformations-cta reveal">
+          <p>Seu antes e depois pode ser o próximo daqui.</p>
+          <a
+            href={waLink('Oi! Vi as transformações no site e quero um resultado assim.')}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary btn-lg"
+          >
+            Quero um Resultado Assim
+            <ArrowRight size={20} />
+          </a>
         </div>
 
         <p className="transformations-disclaimer reveal">

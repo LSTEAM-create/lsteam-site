@@ -26,6 +26,8 @@ function Footer() {
             <a href="#sobre">Sobre</a>
             <a href="#servicos">Serviços</a>
             <a href="#resultados">Resultados</a>
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="#faq">FAQ</a>
             <a href="#contato">Contato</a>
           </nav>
 
