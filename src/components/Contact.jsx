@@ -70,7 +70,7 @@ function Contact() {
                 </span>
               </a>
               <a
-                href="https://www.instagram.com/ls.lucas.melo"
+                href="https://www.instagram.com/ls_lucas.melo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-item"
@@ -80,7 +80,7 @@ function Contact() {
                 </span>
                 <span>
                   <strong>Instagram</strong>
-                  @ls.lucas.melo
+                  @ls_lucas.melo
                 </span>
               </a>
             </div>

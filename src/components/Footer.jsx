@@ -35,7 +35,7 @@ function Footer() {
             <h4>Redes Sociais</h4>
             <div className="footer-social-icons">
               <a
-                href="https://www.instagram.com/ls.lucas.melo"
+                href="https://www.instagram.com/ls_lucas.melo"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
