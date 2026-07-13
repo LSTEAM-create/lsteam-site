@@ -17,7 +17,7 @@ function Hero() {
         <div className="hero-content">
           <div className="hero-badge reveal">
             <span className="hero-badge-dot" />
-            LS TEAM — FORJA DE GIGANTES
+            LS TEAM — ELITE SQUAD
           </div>
           <h1 className="hero-title reveal">
             Treinos com <br />
